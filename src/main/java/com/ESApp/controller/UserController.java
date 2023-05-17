@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,14 +16,14 @@ import com.ESApp.constant.EResponse;
 import com.ESApp.service.UserService;
 import com.ESApp.utility.BaseResponse;
 
-
-
 @RestController
 @RequestMapping("/user")
 public class UserController {
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 
+	@Autowired
 	private UserService userService;
+	
 	
 	@PostMapping("/")
 	public ResponseEntity<BaseResponse> expense(@RequestBody String input) {

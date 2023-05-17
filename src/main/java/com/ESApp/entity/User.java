@@ -3,7 +3,11 @@ package com.ESApp.entity;
 
 public class User {
 
-	private String name;	
+	private String name;
+	
+	public User() {
+		super();
+	}
 	public User(String name) {
 		this.name = name;
 	}
